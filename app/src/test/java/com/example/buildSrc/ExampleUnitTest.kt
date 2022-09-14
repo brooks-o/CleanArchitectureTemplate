@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturetemplate
+package com.example.buildSrc
 
 import org.junit.Test
 
