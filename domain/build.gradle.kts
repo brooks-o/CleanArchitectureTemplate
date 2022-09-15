@@ -48,4 +48,7 @@ dependencies {
     testImplementation(Libraries.JUNIT)
     androidTestImplementation(Libraries.TEST_EXT_JUNIT)
     androidTestImplementation(Libraries.TEST_ESPRESSO)
+
+    implementation(Libraries.APOLLO_RUNTIME)
+    implementation(Libraries.APOLLO_API)
 }
