@@ -9,6 +9,8 @@ object Versions {
     const val TEST_ESPRESSO_CORE_VERSION = "3.4.0"
 
     const val MOCKITO_VERSION = "4.0.0"
+    const val RXKOTLIN_VERSION = "3.0.1"
+    const val APOLLO_VERSION = "3.6.0"
 }
 
 object Libraries {
@@ -20,4 +22,7 @@ object Libraries {
     const val TEST_ESPRESSO = "androidx.test.espresso:espresso-core:3.4.0"
 
     const val MOCKITO = "org.mockito.kotlin:mockito-kotlin:${Versions.MOCKITO_VERSION}"
+    const val RXKOTLIN = "io.reactivex.rxjava3:rxkotlin:${Versions.RXKOTLIN_VERSION}"
+    const val APOLLO_RUNTIME = "com.apollographql.apollo:apollo-runtime:${Versions.APOLLO_VERSION}"
+    const val APOLLO_API = "com.apollographql.apollo3:apollo-api:${Versions.APOLLO_VERSION}"
 }

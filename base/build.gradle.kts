@@ -4,6 +4,7 @@ import com.example.buildSrc.Libraries
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.apollographql.apollo3").version("3.6.0")
 }
 
 android {
@@ -26,21 +27,36 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    apollo {
+        packageName.set("com.example")
     }
 }
 
 dependencies {
     implementation(project(":domain"))
+
     implementation(Libraries.CORE_KTX)
     implementation(Libraries.APPCOMPAT)
     implementation(Libraries.MATERIAL)
     testImplementation(Libraries.JUNIT)
     androidTestImplementation(Libraries.TEST_EXT_JUNIT)
     androidTestImplementation(Libraries.TEST_ESPRESSO)
+
+    implementation(Libraries.RXKOTLIN)
+    implementation(Libraries.APOLLO_RUNTIME)
+    implementation(Libraries.APOLLO_API)
 }
