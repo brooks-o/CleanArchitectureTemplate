@@ -10,7 +10,7 @@ abstract class BaseAdapter<T> : RecyclerView.Adapter<BaseViewHolder<T, *>>() {
         holder.bind(items[position], position)
     }
 
-    override fun getItemCount(): Int = if (items == null) 0 else items.size
+    override fun getItemCount(): Int = items.size
 
     fun getItems(): List<T> = items
 
