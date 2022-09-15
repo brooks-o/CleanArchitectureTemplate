@@ -1,5 +1,6 @@
 import com.example.buildSrc.Configuration
 import com.example.buildSrc.Libraries
+import org.jetbrains.kotlin.cli.jvm.main
 
 plugins {
     id("com.android.library")
@@ -40,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":base"))
     implementation(project(":domain"))
 
     implementation(Libraries.CORE_KTX)
