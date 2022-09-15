@@ -23,6 +23,6 @@ object Libraries {
 
     const val MOCKITO = "org.mockito.kotlin:mockito-kotlin:${Versions.MOCKITO_VERSION}"
     const val RXKOTLIN = "io.reactivex.rxjava3:rxkotlin:${Versions.RXKOTLIN_VERSION}"
-    const val APOLLO_RUNTIME = "com.apollographql.apollo:apollo-runtime:${Versions.APOLLO_VERSION}"
+    const val APOLLO_RUNTIME = "com.apollographql.apollo3:apollo-runtime:${Versions.APOLLO_VERSION}"
     const val APOLLO_API = "com.apollographql.apollo3:apollo-api:${Versions.APOLLO_VERSION}"
 }

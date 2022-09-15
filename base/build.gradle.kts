@@ -4,7 +4,6 @@ import com.example.buildSrc.Libraries
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.apollographql.apollo3").version("3.6.0")
 }
 
 android {
@@ -39,10 +38,6 @@ android {
 
     buildFeatures {
         dataBinding = true
-    }
-
-    apollo {
-        packageName.set("com.example")
     }
 }
 
