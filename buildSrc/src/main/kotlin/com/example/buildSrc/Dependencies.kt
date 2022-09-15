@@ -11,6 +11,8 @@ object Versions {
     const val MOCKITO_VERSION = "4.0.0"
     const val RXKOTLIN_VERSION = "3.0.1"
     const val APOLLO_VERSION = "3.6.0"
+    const val GOOGLE_HILT_VERSION = "2.38.1"
+    const val ANDROID_HILT_VERSION = "1.3.0"
 }
 
 object Libraries {
@@ -25,4 +27,7 @@ object Libraries {
     const val RXKOTLIN = "io.reactivex.rxjava3:rxkotlin:${Versions.RXKOTLIN_VERSION}"
     const val APOLLO_RUNTIME = "com.apollographql.apollo3:apollo-runtime:${Versions.APOLLO_VERSION}"
     const val APOLLO_API = "com.apollographql.apollo3:apollo-api:${Versions.APOLLO_VERSION}"
+
+    const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.GOOGLE_HILT_VERSION}"
+    const val HILT_GOOGLE_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.GOOGLE_HILT_VERSION}"
 }

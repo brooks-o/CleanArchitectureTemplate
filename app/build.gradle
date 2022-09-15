@@ -4,6 +4,8 @@ import com.example.buildSrc.Libraries
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -39,7 +41,11 @@ android {
     buildFeatures {
         dataBinding = true
     }
- }
+}
+
+kapt {
+    correctErrorTypes = true
+}
 
 dependencies {
     implementation(project(":presentation"))
@@ -55,4 +61,7 @@ dependencies {
 
     implementation(Libraries.APOLLO_RUNTIME)
     implementation(Libraries.APOLLO_API)
+
+    implementation(Libraries.HILT_ANDROID)
+    kapt(Libraries.HILT_GOOGLE_COMPILER)
 }

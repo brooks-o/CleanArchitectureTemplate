@@ -4,6 +4,9 @@ import com.example.buildSrc.Libraries
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+
 }
 
 android {
@@ -44,4 +47,6 @@ dependencies {
     testImplementation(Libraries.JUNIT)
     androidTestImplementation(Libraries.TEST_EXT_JUNIT)
     androidTestImplementation(Libraries.TEST_ESPRESSO)
+    implementation(Libraries.HILT_ANDROID)
+    implementation(Libraries.HILT_GOOGLE_COMPILER)
 }
