@@ -1,0 +1,12 @@
+query Pokemon_v2_pokemon {
+    pokemon_v2_pokemon {
+        base_experience
+        height
+        id
+        is_default
+        name
+        order
+        pokemon_species_id
+        weight
+    }
+}
