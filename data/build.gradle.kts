@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":base"))
     implementation(project(":domain"))
 
     implementation(Libraries.CORE_KTX)
@@ -48,9 +49,14 @@ dependencies {
     androidTestImplementation(Libraries.TEST_EXT_JUNIT)
     androidTestImplementation(Libraries.TEST_ESPRESSO)
 
+    implementation(Libraries.RXKOTLIN)
+
     implementation(Libraries.APOLLO_RUNTIME)
     implementation(Libraries.APOLLO_API)
+    implementation(Libraries.APOLLO_RX3_SUPPORT)
 
     implementation(Libraries.HILT_ANDROID)
-    implementation(Libraries.HILT_GOOGLE_COMPILER)
+    // implementation(Libraries.HILT_LIFECYCLE_VIEWMODEL)
+    kapt(Libraries.HILT_GOOGLE_COMPILER)
+    kapt(Libraries.HILT_COMPILER)
 }

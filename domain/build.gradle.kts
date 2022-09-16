@@ -4,6 +4,7 @@ import com.example.buildSrc.Libraries
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
     id("com.apollographql.apollo3").version("3.6.0")
 }
 
@@ -50,6 +51,12 @@ dependencies {
     androidTestImplementation(Libraries.TEST_ESPRESSO)
 
     implementation(Libraries.RXKOTLIN)
+
     implementation(Libraries.APOLLO_RUNTIME)
     implementation(Libraries.APOLLO_API)
+
+    implementation(Libraries.HILT_ANDROID)
+    // implementation(Libraries.HILT_LIFECYCLE_VIEWMODEL)
+    kapt(Libraries.HILT_GOOGLE_COMPILER)
+    kapt(Libraries.HILT_COMPILER)
 }

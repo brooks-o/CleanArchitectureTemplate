@@ -1,10 +1,11 @@
 import com.example.buildSrc.Configuration
 import com.example.buildSrc.Libraries
-import org.jetbrains.kotlin.cli.jvm.main
 
 plugins {
     id("com.android.library")
+    id("kotlin-kapt")
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -50,4 +51,18 @@ dependencies {
     testImplementation(Libraries.JUNIT)
     androidTestImplementation(Libraries.TEST_EXT_JUNIT)
     androidTestImplementation(Libraries.TEST_ESPRESSO)
+
+    implementation(Libraries.ACTIVITY_KTX)
+    implementation(Libraries.FRAGMENT_KTX)
+
+    implementation(Libraries.RXKOTLIN)
+
+    implementation(Libraries.APOLLO_RUNTIME)
+    implementation(Libraries.APOLLO_API)
+    implementation(Libraries.APOLLO_RX3_SUPPORT)
+
+    implementation(Libraries.HILT_ANDROID)
+    // implementation(Libraries.HILT_LIFECYCLE_VIEWMODEL)
+    kapt(Libraries.HILT_GOOGLE_COMPILER)
+    kapt(Libraries.HILT_COMPILER)
 }
