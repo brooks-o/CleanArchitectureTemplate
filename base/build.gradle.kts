@@ -3,6 +3,7 @@ import com.example.buildSrc.Libraries
 
 plugins {
     id("com.android.library")
+    id ("kotlin-kapt")
     id("org.jetbrains.kotlin.android")
 }
 
