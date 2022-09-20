@@ -56,7 +56,6 @@ dependencies {
     implementation(Libraries.APOLLO_API)
 
     implementation(Libraries.HILT_ANDROID)
-    // implementation(Libraries.HILT_LIFECYCLE_VIEWMODEL)
     kapt(Libraries.HILT_GOOGLE_COMPILER)
     kapt(Libraries.HILT_COMPILER)
 }
