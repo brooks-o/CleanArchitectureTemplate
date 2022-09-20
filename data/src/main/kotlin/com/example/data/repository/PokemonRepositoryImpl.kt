@@ -7,11 +7,16 @@ import com.example.domain.repository.PokemonRepository
 import io.reactivex.rxjava3.core.Flowable
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.flow.Flow
 
 @Singleton
 class PokemonRepositoryImpl @Inject constructor(
     private val remoteDataSource: PokemonDataSource
 ) : PokemonRepository {
+
     override fun getPokemonList(): Flowable<ApolloResponse<Pokemon_v2_pokemonQuery.Data>> =
         remoteDataSource.getPokemonList()
+
+    override fun getPokemonListByCoroutine(): Flow<ApolloResponse<Pokemon_v2_pokemonQuery.Data>> =
+        remoteDataSource.getPokemonListByCoroutine()
 }

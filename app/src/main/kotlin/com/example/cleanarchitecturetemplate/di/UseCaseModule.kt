@@ -17,4 +17,10 @@ class UseCaseModule {
     fun provideGetPokemonListUseCase(
         pokemonRepository: PokemonRepository
     ): GetPokemonListUseCase = GetPokemonListUseCase(pokemonRepository::getPokemonList)
+
+    @Provides
+    @ViewModelScoped
+    fun provideGetPokemonListByCoroutineUseCase(
+        pokemonRepository: PokemonRepository
+    ): GetPokemonListByCoroutineUseCase = GetPokemonListByCoroutineUseCase(pokemonRepository::getPokemonListByCoroutine)
 }

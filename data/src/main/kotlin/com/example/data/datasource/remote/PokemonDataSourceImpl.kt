@@ -5,6 +5,8 @@ import com.example.cleanarchitecturetemplate.Pokemon_v2_pokemonQuery
 import com.example.data.api.PokemonApi
 import com.example.data.datasource.PokemonDataSource
 import io.reactivex.rxjava3.core.Flowable
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.reactive.asFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -17,4 +19,9 @@ class PokemonDataSourceImpl @Inject constructor(
         api.invoke(
             inputType = null
         )
+
+    override fun getPokemonListByCoroutine(): Flow<ApolloResponse<Pokemon_v2_pokemonQuery.Data>> =
+        api.invoke(
+            inputType = null
+        ).asFlow()
 }
