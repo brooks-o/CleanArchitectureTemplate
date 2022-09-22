@@ -21,6 +21,8 @@ object Versions {
     const val ANDROID_HILT_VERSION = "1.0.0-alpha03"
 
     const val OKHTTP_VERSION = "5.0.0-alpha.2"
+
+    const val TIMBER_VERSION = "5.0.1"
 }
 
 object Libraries {
@@ -50,4 +52,5 @@ object Libraries {
     const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP_VERSION}"
     const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP_VERSION}"
 
+    const val TIMBER = "com.jakewharton.timber:timber:${Versions.TIMBER_VERSION}"
 }

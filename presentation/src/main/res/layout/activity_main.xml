@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:onClick="@{()->viewModel.getPokemonList()}"
+            android:onClick="@{()->viewModel.getPokemonListByCoroutine()}"
             android:text="포켓몬 목록 부르기" />
 
         <androidx.recyclerview.widget.RecyclerView

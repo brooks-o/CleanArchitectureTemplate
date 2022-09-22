@@ -13,6 +13,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.kotlin.subscribeBy
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -44,6 +45,7 @@ class PokemonViewModel @Inject constructor(
                 return@launch
             }
 
+            Timber.v("data : ${result.data?.pokemon_v2_pokemon?.map(Pokemon_v2_pokemonQuery.Pokemon_v2_pokemon::mapIt)}")
             _livePokemonList.postValue(result.data?.pokemon_v2_pokemon?.map(Pokemon_v2_pokemonQuery.Pokemon_v2_pokemon::mapIt))
         }
     }

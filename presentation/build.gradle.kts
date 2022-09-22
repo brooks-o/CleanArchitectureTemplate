@@ -64,4 +64,6 @@ dependencies {
     implementation(Libraries.HILT_ANDROID)
     kapt(Libraries.HILT_GOOGLE_COMPILER)
     kapt(Libraries.HILT_COMPILER)
+
+    implementation(Libraries.TIMBER)
 }
