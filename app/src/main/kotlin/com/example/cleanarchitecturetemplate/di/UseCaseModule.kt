@@ -1,6 +1,7 @@
 package com.example.cleanarchitecturetemplate.di
 
 import com.example.domain.repository.PokemonRepository
+import com.example.domain.usecase.GetPokemonListByCoroutineUseCase
 import com.example.domain.usecase.GetPokemonListUseCase
 import dagger.Module
 import dagger.Provides

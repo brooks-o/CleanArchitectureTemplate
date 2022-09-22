@@ -1,6 +1,7 @@
 package com.example.cleanarchitecturetemplate.di
 
 import com.example.data.api.PokemonApi
+import com.example.data.api.PokemonApiByCoroutine
 import com.example.data.datasource.PokemonDataSource
 import com.example.data.datasource.remote.PokemonDataSourceImpl
 import dagger.Module
@@ -16,6 +17,7 @@ class DataSourceModule {
     @Provides
     @ViewModelScoped
     fun providePokemonDataSource(
-        pokemonApi: PokemonApi
-    ): PokemonDataSource = PokemonDataSourceImpl(api = pokemonApi)
+        pokemonApi: PokemonApi,
+        pokemonApiByCoroutine: PokemonApiByCoroutine
+    ): PokemonDataSource = PokemonDataSourceImpl(api = pokemonApi, apiByCoroutine = pokemonApiByCoroutine)
 }
