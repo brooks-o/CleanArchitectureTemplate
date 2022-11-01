@@ -71,19 +71,19 @@
 ├── domain
 │   └── src
 │       ├── main
-│       │   ├── graphql
-│       │   │   └── query
-│       │   │       ├── Pokemon_v2_pokemon.graphql
-│       │   │       └── schema.json
-│       │   └── kotlin
-│       │       └── com
-│       │           └── example
-│       │               └── domain
-│       │                   ├── repository
-│       │                   │   └── PokemonRepository.kt
-│       │                   └── usecase
-│       │                       ├── GetPokemonListByCoroutineUseCase.kt
-│       │                       └── GetPokemonListUseCase.kt
+│          ├── graphql
+│          │   └── query
+│          │       ├── Pokemon_v2_pokemon.graphql
+│          │       └── schema.json
+│          └── kotlin
+│              └── com
+│                  └── example
+│                      └── domain
+│                          ├── repository
+│                          │   └── PokemonRepository.kt
+│                          └── usecase
+│                              ├── GetPokemonListByCoroutineUseCase.kt
+│                              └── GetPokemonListUseCase.kt
 ├── presentation
 │   └── src
 │       ├── main
